@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>DoubleClick the Rabbit Game</title>
+    <style>
+        
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-size: cover; 
+            background-color: #9ecb9e;
+            margin: 0; /* Remove default margin */
+            padding: 0; 
+        }
+        h3 {
+            color: #FF5733;
+            font-size: 36px;
+        }
+        p {
+            color: #7312c8;
+            font-size: 25px;
+        }
+        #container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100%; 
+            border: 5px solid #035531; 
+        }
+        #cuterabbit {
+            font-size: 24px;
+            position: absolute;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div id="container"></div>
+    <h3>Double Click the Rabbit if you can "Game"! </h3>
+    
+    <div id="cuterabbit" onclick="moveRabbit()">
+       <!-- Preserve tag for the cute rabbit's ASCII art representation -->
+        <pre>
+   (\(\
+   (o.o)
+o_(")(")
+        </pre>
+    </div>
+
+    <!-- declaration of function to move the cuterabbit, main logic-->
+    <script>
+        function moveRabbit() {
+            const rabbit = document.getElementById("cuterabbit");
+
+            // Calculating the maximum X and Y positions within the visible window to ensure the rabbit stays within the window
+            const maxX = window.innerWidth - cuterabbit.clientWidth;
+            const maxY = window.innerHeight - cuterabbit.clientHeight;
+            // Generate random X and Y coordinates within the calculated maximums
+            const newX = Math.floor(Math.random() * maxX);
+            const newY = Math.floor(Math.random() * maxY);
+
+            // Update and change the location of cuterabbit
+            cuterabbit.style.left = `${newX}px`;
+            cuterabbit.style.top = `${newY}px`;
+        }
+    </script>
+</body>
+</html>
